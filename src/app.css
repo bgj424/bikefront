@@ -1,0 +1,201 @@
+@import "~react-datepicker/dist/react-datepicker.css";
+@font-face {
+    font-family: NotoSans-Regular;
+    src: url(NotoSans-Regular.ttf);
+}
+
+:root {
+    --background-hover: rgb(243, 243, 243);
+    --departure-station: #c40053;
+    --return-station: #003c85;
+}
+
+.App {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.departure-station {
+    color: var(--departure-station);
+}
+
+.return-station {
+    color: var(--return-station);
+}
+
+.secondary {
+    color: rgb(88, 88, 88);
+}
+
+.secondary-dark {
+    color: rgb(169, 169, 169);
+}
+
+body {
+    overflow: hidden;
+    font-family: NotoSans-Regular!important;
+}
+
+.list-item.station {
+    padding: 15px;
+}
+
+.list-item {
+    border-top: 1px solid silver;
+}
+
+.list-item:hover {
+    background-color: var(--background-hover);
+    cursor: pointer;
+}
+
+.list-item.active {
+    background-color: rgb(236, 245, 255);
+}
+
+/* Currently selected station marker */
+.pigeon-click-block.active {
+    z-index:2;
+}
+
+.journey-line {
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to right, #ff036c, #1d63b8);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 2px silver;
+    -moz-box-shadow: 0 2px 2px silver;
+    box-shadow: 0 2px 2px silver;
+}
+
+.journey-line.active {
+    width: 100%;
+    height: 5px;
+}
+
+button.btn, input {
+    min-width: 150px;
+    border-radius: 20px!important;
+}
+
+input {
+    border: 1px solid silver!important;
+    padding: 5px;
+}
+
+button.active, button:hover {
+    filter: brightness(0.8);
+}
+
+#journey-info {
+    width: max-content;
+    position: fixed;
+    width: max-content;
+    bottom: 0;
+    align-self: center;
+    z-index: 2;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.selected-station-info {
+    display: none;
+}
+
+.map-overlay {
+    background-color: rgba(255, 255, 255, 0.800);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+div.selected-station-info:hover {
+    background-color: var(--background-hover);
+}
+
+#date-selector {
+    margin: 20px;
+    right: 0;
+    text-align: left;
+}
+
+#date-selector > div, #journey-info .journey-info-content {
+    padding: 10px;
+}
+
+.date-selector-picker > * {
+    margin: 5px;
+}
+
+.settings-badge:hover {
+    cursor: pointer;
+}
+
+.tab-buttons button, .tab-buttons button:hover {
+    background-color: transparent;
+    border-radius: 0px!important;
+    width: 100%;
+}
+
+.tab-buttons button:hover {
+    border: 1px solid gray;
+}
+
+#departures-tab {
+    color: var(--departure-station);
+    background-color: transparent;
+    border: 1px solid var(--departure-station);
+}
+
+#departures-tab.active {
+    color: white;
+    background-color: var(--departure-station);
+}
+
+#returns-tab {
+    color: var(--return-station);
+    background-color: transparent;
+    border: 1px solid var(--return-station);
+}
+
+#returns-tab.active {
+    color: white;
+    background-color: var(--return-station);
+}
+
+.offcanvas-header {
+    -webkit-box-shadow: 0 1px 3px silver;
+    -moz-box-shadow: 0 1px 3px silver;
+    box-shadow: 0 1px 3px silver;
+    z-index: 1;
+}
+
+.navbar, .floating-container, .dropdown-menu {
+    -webkit-box-shadow: 2px 2px 4px gray;
+    -moz-box-shadow: 2px 2px 4px gray;
+    box-shadow: 2px 2px 4px gray;
+    z-index: 1;
+}
+
+.floating-container {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.800);
+    backdrop-filter: blur(2px);
+}
+
+.container-title {
+    background-color:rgb(44, 44, 44);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+    padding: 10px;
+}
+
+.offcanvas-title {
+    width: 90%;
+}
+
