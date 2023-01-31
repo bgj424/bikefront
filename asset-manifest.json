@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/bikefront/static/css/main.c453c635.css",
+    "main.js": "/bikefront/static/js/main.9d319baf.js",
+    "static/js/787.05894362.chunk.js": "/bikefront/static/js/787.05894362.chunk.js",
+    "static/media/NotoSans-Regular.ttf": "/bikefront/static/media/NotoSans-Regular.eae34fa8f1e0c4c6d797.ttf",
+    "index.html": "/bikefront/index.html",
+    "main.c453c635.css.map": "/bikefront/static/css/main.c453c635.css.map",
+    "main.9d319baf.js.map": "/bikefront/static/js/main.9d319baf.js.map",
+    "787.05894362.chunk.js.map": "/bikefront/static/js/787.05894362.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c453c635.css",
+    "static/js/main.9d319baf.js"
+  ]
+}
